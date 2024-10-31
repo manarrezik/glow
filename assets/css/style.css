@@ -306,6 +306,24 @@ gap: 3px;
 transition: var(--transition-1);
 
 }
+.img-holder{
+  aspect-ratio: var(--width)/ var(--height);
+  background-color: var(--light-gray);
+
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badge {
+  max-width: max-content;
+  background-color: var(--hoockers-green);
+  color: var(--white);
+  font-weight: var(--fw-700);
+  padding-inline: 12px;
+  border-radius: var(--radius-3);
+}
 
 
 
@@ -353,10 +371,10 @@ transition: var(--transition-1);
 
 .header-top.active {
   position: fixed;
-  top: 80px;
+  top: -80px;
   bottom: auto;
   box-shadow: var(--shadow-1);
-  transform: translate(--transition-2);
+  transform: translateY(100%);
   transition: var(--transition-2);
 
 
@@ -365,7 +383,7 @@ transition: var(--transition-1);
 
 .header-top.header-hide {
   box-shadow: none;
-  transform: translate(0);
+  transform: translateY(0);
 
 
 }
@@ -392,8 +410,8 @@ transition: var(--transition-1);
 .nav-open-btn .line-1{
   width: 15px;
 }
-.nav-open-btn .line-2{
-  width: 85px;
+.nav-open-btn .line-3{
+  width: 18px;
 }
 .header-action-btn{
   font-size: 28px;
@@ -473,6 +491,7 @@ mobile-navbar .navbar-link:is(:hover, :focus) { color: var(--hoockers-green )};
 }
 .overlay .active{
   background-color: var(--black_50);
+  pointer-events: all;
   
 }
 
@@ -548,11 +567,100 @@ mobile-navbar .navbar-link:is(:hover, :focus) { color: var(--hoockers-green )};
 /*-----------------------------------*\
   #SHOP
 \*-----------------------------------*/
+.shop .title-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-block-end: 50px;
 
 
+}
+.shop .btn-link:is(:hover, :focus) {color: var(--hoockers-green);}
+
+.shop-card .card-banner{
+  position: relative;
+  overflow: hidden;
+
+}
+.shop-card .badge{
+
+position: absolute;
+top: 20px;
+left: 20px;
+
+}
+.shop-card .card-actions{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: grid;
+  gap: 10px;
+  /* opacity: 0; */
+  transition: var(--transition-2);
+}
+.shop-card .action-btn{
+  background-color: var(--white);
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+
+}
+.shop-card:is(:hover , :focus-within) .card-actions {
+  opacity: 1;
+  transform: translate(-20px, -50%);
+}
+.shop-card .action-btn:is(:hover, :focus) {
+  background-color: var(--black);
+  color: var(--white);
+}
+.shop-card .card-content {
+  padding-block: 20px;
+  text-align: center;
+}
+.shop-card :is(.price, .card-rating, .rating-wrapper)
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.shop-card .del{
+  font-size: var(--fs-9);
+  font-weight: var(--fw-400);
+
+}
+.shop-card .price .span{
+  color: var(--black);
+  font-weight: var(--fw-700);
+}
+.shop-card .card-title{
+  color: var(--black);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  margin-block-end: 8px;
+  transition: var(--transition-1);
+
+}
+.shop-card .card-title :is(:hover, :focus ){
+  text-decoration: underline;
+  color: var(--hoockers-green);
+}
+.shop-card .rating-wrapper{
+  gap: 2px;
+  color: var(--hoockers-green);
+  font-size: 15px;
 
 
-
+}
+.shop-card .rating-text{
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  line-height: 1;
+}
 /*-----------------------------------*\
   #BANNER
 \*-----------------------------------*/
