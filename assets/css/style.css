@@ -324,6 +324,13 @@ transition: var(--transition-1);
   padding-inline: 12px;
   border-radius: var(--radius-3);
 }
+.flex-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
 
 
@@ -703,7 +710,24 @@ left: 20px;
 /*-----------------------------------*\
   #FEATURE
 \*-----------------------------------*/
-
+.feature{
+  text-align:center ;
+}
+.feature .section-title{
+  margin-block-end: 40px;
+  margin-block-start: 40px;
+}
+.feature-card  .card-icon{
+  width: 100px;
+  margin-inline: auto;
+ 
+}
+.feature-card .card-title{
+  margin-block: 35px 15px;
+}
+.feature-card .card-text{
+  font-size: var(--fs-7);
+}
 
 
 
